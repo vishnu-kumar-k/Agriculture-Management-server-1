@@ -20,7 +20,7 @@ const GenerateOtpForRegister = async (req, res) => {
 //Adding to DB
 
 const Register = async (req, res) => {
-  const { email, name, passoutyear, password, role } =
+  const { email, name,  password } =
     req.body;
   try {
     const hashedPassword = await bcrypt.hash(password, 10); // You can adjust the saltRounds as needed (e.g., 10)
@@ -28,8 +28,7 @@ const Register = async (req, res) => {
     const newUser = new Auth({
       email,
       name,
-      passoutYear: passoutyear,
-      role,
+     
       password: hashedPassword, // Store the hashed password in the database
     });
 

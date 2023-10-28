@@ -15,16 +15,7 @@ const userSchema = new mongoose.Schema({
     
   },
   
-  passoutYear: {
-    type: Number,
-    required: true,
-  },
-
-  role:{
-    type:String,
-    enum:["Student","Alumni","Staff"],
-    required:true
-  },
+  
   password:{
     type:String,
     required:true
