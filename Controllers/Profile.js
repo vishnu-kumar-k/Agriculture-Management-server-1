@@ -2,7 +2,7 @@ const Auth = require("../Model/User");
 
 const GetProfile = async (req, res) => {
   try {
-    const id = req.params.id; // Change to use parameters from the URL
+    const id = req.body.id; // Change to use parameters from the URL
 
     const user = await Auth.findOne({ id }).exec();
 
