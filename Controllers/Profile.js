@@ -4,7 +4,7 @@ const GetProfile = async (req, res) => {
   try {
     const id = req.body.id; // Change to use parameters from the URL
 
-    const user = await Auth.findOne({ id }).exec();
+    const user = await Auth.findOne({ _id:id });
 
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
@@ -30,7 +30,7 @@ const updateProfile = async (req, res) => {
   try {
     const { id, phoneNumber, location, plantType, numberOfLands, acreage } = req.body;
 
-    const user = await Auth.findOne({ id });
+    const user = await Auth.findOne({ _id:id });
 
     if (!user) {
       return res.status(404).json({ error: 'User not found' });

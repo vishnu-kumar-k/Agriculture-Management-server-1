@@ -39,7 +39,7 @@ const Register = async (req, res) => {
       expiresIn: "7d",
     });
 
-    res.status(201).json({ msg: "User registered successfully", token,status:true });
+    res.status(201).json({ msg: "User registered successfully", token,status:true,id:savedUser._id });
   } catch (err) {
     console.log(err);
     res.json({ err: err });
