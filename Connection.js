@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Replace 'your-database-name' with your actual database name
-const dbURI = 'mongodb+srv://vishnuk55265:vishnuk55265@cluster0.svueomz.mongodb.net/?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://B9M4HEzaQWLs7o1H:B9M4HEzaQWLs7o1H@cluster0z.btic4it.mongodb.net/?retryWrites=true&w=majority';
 
 // Create a function to connect to the database
 const connectToDatabase = async () => {

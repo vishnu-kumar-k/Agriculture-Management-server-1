@@ -19,7 +19,7 @@ const Verify = async (req, res) => {
       res.json({ status: true, id: decoded.userId, name: result.name });
     }
   } catch (err) {
-    console.log(err.message)
+    console.log(err.message);
     res.json({ status: false });
   }
 };
